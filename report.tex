@@ -34,114 +34,144 @@
     Up to $\sim$2000 characters briefly describing the project (i.e. its goals and results).
 \end{abstract}
 
-\section{Goals/requirements}
+\section{Goal/s of the project}
 
-Detailed description of the project goals, requirements, and expected outcomes.
+Detailed description of the project goal/s.
 %
-Use case Diagrams, examples, or Q/A simulations are welcome.
+Use case diagrams, examples, or Q/A simulations are welcome.
 
-\subsection{Scenarios}
+\subsection{Usage scenarios}
 
 Informal description of the ways users are expected to interact with your project.
 %
-It should describe \emph{how} and \emph{why} a user should use / interact with the system.
+It should describe \emph{how} and \emph{why} a user use / interact with the system.
 
-\subsection{Self-assessment policy}
+\subsection{Definition of done}
 
 \begin{itemize}
-    \item How should the \emph{quality} of the \emph{produced software} be assessed?
-    
-    \item How should the \emph{effectiveness} of the project outcomes be assessed?
+    \item Which kind of \emph{artefacts} will be delivered?
+    %
+    \item How will the system \emph{functionality} be tested?
+    %
 \end{itemize}
 
-\section{Background}
-
-Any preliminary notion necessary to understand the goals, the motivations, the context, or the development of this project.
+\section{Background and link to the theory}
+%
+(To be written at the end)
 %
 \begin{itemize}
-    \item Theoretical aspects
-    
-    \item Used frameworks / models / technologies (and motivation for their choice)
+    \item Relevant architectural styles (the ones mentioned in \Cref{sec:requirements})
+    %
+    \item Relevant interaction patterns (the ones mentioned in \Cref{sec:requirements}) 
+    %
+    \item Relevant software frameworks (the ones mentioned in \Cref{sec:requirements,sec:design}) 
 \end{itemize}
 
 \section{Requirements Analysis}
+\label{sec:requirements}
 
-Is there any implicit requirement hidden within this project's requirements?
+\subsection{Requirements list}
 %
-Is there any implicit hypothesis hidden within this project's requirements?
+\begin{itemize}
+    \item Functional
+    %
+    \item Non functional
+    %
+\end{itemize}
 %
-Are there any non-functional requirements implied by this project's requirements?
 
-What model / paradigm / techonology is the best suited to face this project's requirements?
+\subsection{Top-down analysis}
 %
-What's the abstraction gap among the available models / paradigms / techonologies and the problem to be solved?
+\begin{itemize}
+    \item What architectural style / interaction pattern / software framework are better suited to develop the project
+    %
+    \item \dots and why w.r.t. requirements
+    %
+\end{itemize}
+%
 
 \section{Design}
+\label{sec:design}
 
 This is where the logical / abstract contribution of the project is presented.
-
-Notice that, when describing a software project, three dimensions need to be taken into account: structure, behaviour, and interaction.
-
+%
 Always remember to report \textbf{why} a particular design has been chosen.
-Reporting wrong design choices which has been evalued during the design phase is welcome too.
+%
+Keep the discussion \emph{technology-free} as much as possible.
+%
+Reporting wrong design choices which has been evaluated during the design phase is welcome too.
 
-\subsection{Structure / Domain Entities}
+\subsection{Structure (domain entities)}
 
 Which entities need to by modelled to reflect the domain?
 %
-(UML Class diagram)
+UML class diagram here with domain entities and possibly messages being exchanged
 
-How should entities be modularised?
+\subsection{Interaction}
+
+How should entities interact with each others?
 %
-(UML Component / Package / Deployment Diagrams)
+UML activity / sequence diagram and protocols definitions.
 
 \subsection{Behaviour}
 
 How should each entity behave?
 %
-(UML State diagram or Activity Diagram)
+UML State diagram.
 
-\subsection{Interaction}
+\subsection{Architecture}
 
-How should entities interact with each other?
+How are software pieces organised into software modules?
 %
-(UML Sequence Diagram)
+UML component / package / deployment diagrams, data-flow among components, web API description.
 
-\section{Implementation Details}
+\subsection{Corner cases}
 
-Just report interesting / non-trivial / non-obvious implementation details.
+\begin{itemize}
+    \item Faults detection
+    %
+    \item Recover strategies
+    %
+    \item Error messages
+    %
+    \item Graceful shutdown
+\end{itemize}
 
+\section{Salient implementation details}
+
+Anything potentially interesting / non-trivial and technologies adopted to match the design.
+%
 This section is expected to be short in case some documentation (e.g. Javadoc or Swagger Spec) has been produced for the software artefacts.
 %
 This this case, the produced documentation should be referenced here.
 
-\section{Self-assessment / Validation}
+\section{Validation}
 
 Choose a criterion for the evaluation of the produced software and \textbf{its compliance to the requirements above}.
-
-Pseudo-formal or formal criteria are preferred.
-
+%
+Description of automated (and manual) tests and their rationale.
+%
 In case of a test-driven development, describe tests here and possibly report the amount of passing tests, the total amount of tests and, possibly, the test coverage.
 
 \section{Deployment Instructions}
 
 Explain here how to install and launch the produced software artefacts.
 %
-Assume the softaware must be installed on a totally virgin environment.
+Assume the software must be installed on a totally virgin environment.
 %
 So, report \textbf{any} configuration step.
-
+%
 Gradle and Docker may be useful here to ensure the deployment and launch processes to be easy.
 
 \section{Usage Examples}
 
 Show how to use the produced software artefacts.
-
+%
 Ideally, there should be at least one example for each scenario proposed above.
 
 \section{Conclusions}
 
-Recap what you did
+Recap what you did.
 
 \subsection{Future Works}
 
@@ -149,7 +179,7 @@ Recap what you did \emph{not}
 
 \subsection{What did we learned}
 
-Racap what did you learned
+Recap what did you learned.
 
 \section*{Stylistic Notes}
 
